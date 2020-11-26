@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>登录-注册</title>
+<link rel="stylesheet" href="css/style2.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+
+<header id="b-public-nav" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                    <a class="navbar-brand" href="">
+                    <img src="images/logo.jpg">
+                
+                </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav b-nav-parent">
+                <li class="hidden-xs b-nav-mobile"></li>
+                <li class="b-nav-cname   b-nav-active ">
+                    <a href="index.php">首页</a>
+                </li>
+                    <li class="b-nav-cname ">
+                        <a href="list.php?name=Java">Java</a>
+                    </li>
+                    <li class="b-nav-cname ">
+                        <a href="list.php?name=PHP">PHP</a>
+                    </li>
+                    <li class="b-nav-cname ">
+                        <a href="list.php?name=Linux">Linux</a>
+                    </li>
+                    <li class="b-nav-cname ">
+                        <a href="list.php?name=C/C++">C/C++</a>
+                    </li>
+                    <li class="b-nav-cname ">
+                      
+                        <a href="list.php?name=Python">Python</a>
+                    </li>
+                    <li class="b-nav-cname ">
+                                                 
+                        <a href="list.php?name=服务器">服务器</a>
+                    </li>
+                    <li class="b-nav-cname ">
+                                   
+                        <a href="https://docs.pythontab.com/">文档</a>
+                    </li>
+                    <li class="b-nav-cname ">
+                                   
+                        <a href="big.html">大牛笔记</a>
+                    </li>
+                    <li class="b-nav-cname ">
+                        
+                        <a href="https://coderlane.net/sandbox">代码测试</a>
+                    </li>
+                    <li class="b-nav-cname ">
+                                   
+                        <a href="game.html">娱乐专区</a>
+                    </li>
+            </ul>
+        
+            <ul id="b-login-word" class="nav navbar-nav navbar-right">
+                    <li class="b-nav-cname b-nav-login">
+                        <div class="hidden-xs b-login-mobile"></div>
+                        <a href="sign.html">登录</a>
+                    </li>
+            </ul>
+        </div>       
+    </div>
+</header>
+
+
+
+<body>
+
+
+
+<div class="cotn_principal">
+  <div class="cont_centrar">
+    <div class="cont_login">
+      <div class="cont_info_log_sign_up">
+        <div class="col_md_login">
+          <div class="cont_ba_opcitiy">
+            <h2>登录</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            <button class="btn_login" onClick="cambiar_login()">登录</button>
+          </div>
+        </div>
+        <div class="col_md_sign_up">
+          <div class="cont_ba_opcitiy">
+            <h2>注册</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            <button class="btn_sign_up" onClick="cambiar_sign_up()">注册</button>
+          </div>
+        </div>
+      </div>
+      <div class="cont_back_info">
+        <div class="cont_img_back_grey"> <img src="./images/hong3.jpg" alt="" /> </div>
+      </div>
+      <div class="cont_forms" >
+        <div class="cont_img_back_"> <img src="./images/hong3.jpg" alt="" /> </div>
+
+
+        <div class="cont_form_login"> <a href="#" onClick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+
+          <h2>LOGIN</h2>
+          <div style="height:60px;"></div>
+
+        <form action="login.php" method="post">
+        <!--输入框-->
+        <div class="username1" style="height:60px;">
+            <!--autoFocus-->
+            <span>用户名</span>
+                <input type="text" required="required"
+                       placeholder="账号名称和登录名" name="user1" />
+         </div>
+        <div class="password1" style="height:60px;">
+        <span>密&nbsp;&nbsp;&nbsp;码</span>
+                <input type="password" required="required"
+                        placeholder="登录密码" name="pwd1" />
+            </div>
+
+          <input type="submit" value="LOGIN" name="submit1" />
+          </form>
+        </div>
+ 
+
+      
+
+        <div class="cont_form_sign_up"> <a href="#" onClick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+
+          <h2>SIGN UP</h2>
+          <div style="height:60px;"></div>
+
+           <form action="register.php" method="post" onsubmit="return checkpwd()" >
+
+           <div class="username2" style="height:60px;">
+           <span>用&nbsp;&nbsp;户&nbsp;&nbsp;名</span>
+           <input type="text" required="required" placeholder="用户名限制为10个字符" name="user2" />
+           </div>      
+          <div class="pwd1" style="height:60px;" >
+          <span>设置密码</span>
+          <input type="password" required="required" placeholder="建议至少使用两种字符" name="pass" id="pwd2" />
+          </div>
+          <div class="pwd2" style="height:60px" >
+          <span>确认密码</span>
+          <input type="password" required="required" placeholder="再次输入密码" name="pass" id="pwd3" />
+          </div>
+ 
+          <input type="submit" value="SIGN UP" name="submit2" />
+          </form>
+    
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+function checkpwd(){
+  let pwd1=document.getElementById("pwd2").value;
+  let pwd2=document.getElementById("pwd3").value;
+  if (pwd1==pwd2) {
+    return true;
+  }else{
+    alert("两次密码输入不一致！");
+    return false;
+  }
+}
+
+</script>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
