@@ -13,3 +13,4 @@
 
 也可自己设置域名
 
+![image](https://github.com/haohaizhi/hongcheng_blog/blob/main/hong/images/blog.png)
